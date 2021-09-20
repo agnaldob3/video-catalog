@@ -10,4 +10,4 @@ steps:
 
   -   id: "Rodando composer"
       name: 'gcr.io/cloud-builders/docker'
-      args: [ 'exec', '-t', 'micro-videos-app','composer','update' ]
+      args: [ 'exec', '-t', 'micro-videos-app','composer','install' ]
