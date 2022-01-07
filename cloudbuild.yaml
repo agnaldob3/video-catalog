@@ -12,7 +12,7 @@ steps:
       name: 'gcr.io/cloud-builders/docker'
       args: [ 'exec','-u','root','-t','micro-videos-app','chown','-R','www-data:www-data','/var/www' ]
 
-  - id: "Chown 777 bootstrap/cache"
+  -   id: "Chown 777 bootstrap/cache"
       name: 'gcr.io/cloud-builders/docker'
       args: [ 'exec','-u','root','-t','micro-videos-app','chown','-R 777','/var/www/bootstrap' ]
 
