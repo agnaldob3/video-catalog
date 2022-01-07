@@ -12,6 +12,10 @@ steps:
       name: 'gcr.io/cloud-builders/docker'
       args: [ 'exec','-u','root','-t','micro-videos-app','chown','-R','www-data:www-data','/var/www' ]
 
+  - id: "Chown -R 777 in /var/www/bootstrap
+      name: 'gcr.io/cloud-builders/docker'
+      args: [ 'exec','-u','root','-t','micro-videos-app','chown','-R 777','/var/www/bootstrap/*' ]
+
   -   id: "Rodando composer"
       name: 'gcr.io/cloud-builders/docker'
       args: [ 'exec', '-t', 'micro-videos-app','composer','update' ]
