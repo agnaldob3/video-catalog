@@ -2,13 +2,13 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Models\Category;
+use App\Models\CastMember;
 use Faker\Generator as Faker;
 
-$factory->define(Category::class, function (Faker $faker) {
+$factory->define(CastMember::class, function (Faker $faker) {
+    $types = [CastMember::TYPE_DIRECTOR, CastMember::TYPE_ACTOR];
     return [
-        'name'=> $faker->colorName,
-        'description' => rand(1, 10) % 2 == 0 ? $faker->sentence():null,
-        'is_active' => true
+        'name' => $faker->lastName,
+        'type' => $types[array_rand($types)]
     ];
 });
