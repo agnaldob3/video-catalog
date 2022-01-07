@@ -29,8 +29,8 @@ steps:
       args: [ 'exec', '-t', 'micro-videos-app','php','/var/www/artisan','key:generate' ]
 
   -   id: "Limpando cache"
-        name: 'gcr.io/cloud-builders/docker'
-        args: [ 'exec', '-t', 'micro-videos-app','php','/var/www/artisan','cache:clear' ]
+      name: 'gcr.io/cloud-builders/docker'
+      args: [ 'exec', '-t', 'micro-videos-app','php','/var/www/artisan','cache:clear' ]
 
   -   id: "Configurando cach"
       name: 'gcr.io/cloud-builders/docker'
