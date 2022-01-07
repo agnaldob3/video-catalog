@@ -32,7 +32,7 @@ steps:
         name: 'gcr.io/cloud-builders/docker'
         args: [ 'exec', '-t', 'micro-videos-app','php','/var/www/artisan','cache:clear' ]
 
-  - id: "Configurando cach"
+  -   id: "Configurando cach"
       name: 'gcr.io/cloud-builders/docker'
       args: [ 'exec', '-t', 'micro-videos-app','php','/var/www/artisan','config:cach' ]
 
