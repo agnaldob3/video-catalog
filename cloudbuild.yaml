@@ -14,7 +14,7 @@ steps:
 
   -   id: "Chown 777 bootstrap/cache"
       name: 'gcr.io/cloud-builders/docker'
-      args: [ 'exec','-u','root','-t','micro-videos-app','chown','-R 777','/var/www/bootstrap' ]
+      args: [ 'exec','-u','root','-t','micro-videos-app','chown','-R','777','/var/www/bootstrap' ]
 
   -   id: "Rodando composer"
       name: 'gcr.io/cloud-builders/docker'
